@@ -80,5 +80,5 @@ L'adresse IP publique du Load Balancer distribue bien le trafic (les deux VMs r�
 ![](capture/Capture%20VM2.png)
 
 ### 4. Nettoyage de l'infrastructure — `terraform destroy`
-Suppression complète pour éviter la consommation de crédits inutiles.
+Suppression complète pour éviter la consommation de crédits.
 ![](capture/Capture%20terraform%20destroy.png)
