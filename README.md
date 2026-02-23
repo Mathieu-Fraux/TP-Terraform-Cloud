@@ -64,7 +64,7 @@ j'ai rajoutée un commande pour ignorer les lien pour la suppression avant de l'
 
 ##  5. Preuves de fonctionnement (Livrables)
 
-[](/capture/)
+[DOssier des captures](/capture/)
 
 ### 1. Planification réussie — `terraform plan`
 Le plan indique bien la création de toutes les ressources nécessaires (16 au total).
