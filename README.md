@@ -1,10 +1,10 @@
-# TP-Terraform-Cloud ☁️
+# TP-Terraform-Cloud 
 
 Ce dépôt contient le code Terraform permettant de déployer une infrastructure hautement disponible sur Microsoft Azure. L'objectif de ce TP est de provisionner un réseau, des règles de sécurité, deux machines virtuelles (avec Nginx) et un Load Balancer.
 
 ---
 
-## 🛠️ 1. Prérequis et Installation
+##  1. Prérequis et Installation
 
 Pour exécuter ce projet, deux outils sont nécessaires :
 
@@ -27,7 +27,7 @@ winget install Microsoft.AzureCLI
 
 ---
 
-## 🔐 2. Authentification et Sécurité
+##  2. Authentification et Sécurité
 
 Avant de lancer les scripts, il est nécessaire de se connecter à son compte Azure via la commande :
 ```bash
@@ -38,7 +38,7 @@ az login
 
 ---
 
-## 🏗️ 3. Architecture et Déploiement
+##  3. Architecture et Déploiement
 
 Le projet a été structuré selon les bonnes pratiques Terraform (séparation en plusieurs fichiers : `main.tf`, `variables.tf`, `version.tf`, `provider.tf` et `outputs.tf`).
 
@@ -51,7 +51,7 @@ Voici l'ordre de construction de l'infrastructure :
 
 ---
 
-## 🐛 4. Difficultés rencontrées et Résolutions
+##  4. Difficultés rencontrées et Résolutions
 
 Lors de ce TP, j'ai dû procéder à plusieurs itérations (`apply` / `destroy`) suite à quelques obstacles :
 
@@ -61,7 +61,7 @@ Lors de ce TP, j'ai dû procéder à plusieurs itérations (`apply` / `destroy`)
 
 ---
 
-## 📸 5. Preuves de fonctionnement (Livrables)
+##  5. Preuves de fonctionnement (Livrables)
 
 [](/capture/)
 
