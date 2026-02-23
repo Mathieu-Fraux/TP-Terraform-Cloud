@@ -46,7 +46,7 @@ Voici l'ordre de construction de l'infrastructure :
 
 1. **Réseau de base :** Création du Resource Group, du Virtual Network  et du Subnet.
 2. **Sécurité :** Mise en place du Network Security Group pour autoriser les ports 22 (SSH) et 80 (HTTP) et bloquer le reste.
-3. **Compute :** Déploiement de 2 VMs Linux. L'installation du serveur web Nginx est automatisée au démarrage via l'attribut `custom_data`.
+3. **Compute :**  Script de déploiement de 2 VMs. L'installation du serveur web Nginx est automatisée au démarrage via l'attribut `custom_data`.
 4. **Disponibilité :** Configuration d'un Load Balancer public pour répartir la charge entre les deux VMs.
 
 ---
