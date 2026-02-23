@@ -47,7 +47,7 @@ Voici l'ordre de construction de l'infrastructure :
 1. **Réseau de base :** Création du Resource Group, du Virtual Network  et du Subnet.
 2. **Sécurité :** Mise en place du Network Security Group pour autoriser les ports 22 (SSH) et 80 (HTTP) et bloquer le reste.
 3. **Compute :** Déploiement de 2 VMs Linux. L'installation du serveur web Nginx est automatisée au démarrage via l'attribut `custom_data`.
-4. **Disponibilité :** Configuration d'un Load Balancer public pour répartir la charge entre les deux VMs (avec une Sonde HTTP).
+4. **Disponibilité :** Configuration d'un Load Balancer public pour répartir la charge entre les deux VMs.
 
 ---
 
@@ -55,9 +55,10 @@ Voici l'ordre de construction de l'infrastructure :
 
 Lors de ce TP, j'ai dû procéder à plusieurs itérations (`apply` / `destroy`) suite à quelques obstacles :
 
-- **Problème de capacité régionale :** Le déploiement dans la région `France Central` échouait par manque de ressources disponibles côté Azure pour les comptes étudiants. J'ai résolu ce problème en modifiant ma variable vers `Switzerland North` (Suisse du Nord).
+- **Problème de capacité régionale :** Le déploiement dans la région `France Central` échouait par manque de ressources disponibles côté Azure pour les comptes étudiants. J'ai résolu ce problème en modifiant ma variable vers `Switzerland North` .
 
-- **Désynchronisation de l'API Azure :** Lors d'un déploiement, le Provider Terraform a planté en raison d'un délai de réponse d'Azure (différentiel de temps) sur la création des ressources (notamment un disque bloqué). Un nettoyage propre (`terraform destroy` ) et une relance ont permis de corriger ce bug de synchronisation.
+- **Désynchronisation de l'API Azure :** Lors d'un déploiement, le Provider Terraform a planté en raison d'un délai de réponse d'Azure (différentiel de temps) sur la création des ressources (disque bloqué car liée).
+j'ai rajoutée un commande pour ignorer les lien pour la suppression avant de l'enlever de nouveau(`terraform destroy`) et une relance à permis de corriger ce bug.
 
 ---
 
